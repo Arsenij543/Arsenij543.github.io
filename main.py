@@ -8,7 +8,7 @@ import requests
 
 # Замени 'TOKEN' на токен твоего бота
 # Этот токен ты получаешь от BotFather, чтобы бот мог работать
-bot = telebot.TeleBot("7695916873:AAH6uAfMtDug_STKaO3Xx975RrYPGanMqcE")
+bot = telebot.TeleBot("")
 memes = os.listdir('./img')
 
 TRASH_DATA = {
@@ -247,5 +247,6 @@ def trash_multiple(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     bot.reply_to(message, message.text)
+
 
 bot.polling()
